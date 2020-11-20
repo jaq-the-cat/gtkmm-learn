@@ -37,7 +37,6 @@ int main(int argc, char *argv[]) {
     //box.add(b2);
     //win.add(box);
 
-    win.show_all_children();
     app.run(win);
     return 0;
 }
