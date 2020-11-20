@@ -25,3 +25,5 @@ src/main.cpp
 -I/usr/include/atk-1.0
 
 -LIBS
+glibmm-2.4
+gtkmm-3.0
