@@ -7,7 +7,7 @@
 
 using std::cout;
 using std::endl;
-using std::string;
+using Glib::ustring;
 
 void clicked() {
     cout << "Hello, world!" << endl;
