@@ -9,8 +9,12 @@ using std::cout;
 using std::endl;
 using Glib::ustring;
 
-void clicked() {
+void clicked1() {
     cout << "Hello, world!" << endl;
+}
+
+void clicked2() {
+    cout << "Goodbye, world!" << endl;
 }
 
 int main(int argc, char *argv[]) {
@@ -27,7 +31,8 @@ int main(int argc, char *argv[]) {
     Gtk::Button b2("Goodbye");
 
     // conf
-    b1.signal_clicked().connect(sigc::ptr_fun(&clicked));
+    b1.signal_clicked().connect(sigc::ptr_fun(&clicked1));
+    b2.signal_clicked().connect(sigc::ptr_fun(&clicked2));
     box.pack_start(b1);
     box.pack_end(b2);
 
