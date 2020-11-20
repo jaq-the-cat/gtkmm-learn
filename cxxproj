@@ -1,5 +1,6 @@
 -SOURCE
 src/main.cpp
+src/win.cpp
 
 -COMMANDS
 pkg-config gtkmm-3.0 --cflags --libs
