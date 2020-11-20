@@ -2,8 +2,7 @@
 #include <iostream>
 #include <string>
 
-#define WIDTH 1200
-#define HEIGHT 800
+#include "../headers/win.hpp"
 
 using std::cout;
 using std::endl;
@@ -20,28 +19,25 @@ void clicked2() {
 int main(int argc, char *argv[]) {
     Gtk::Main app(argc, argv);
 
-    Gtk::Window win;
-    win.set_title("Hello, GTK!");
-    win.set_resizable(false);
-    win.set_default_size(WIDTH, HEIGHT);
+    Win win("Hello, world!");
 
     // init
-    Gtk::Box box;
-    Gtk::Button b1("Hello");
-    Gtk::Button b2("Goodbye");
+    //Gtk::Box box;
+    //Gtk::Button b1("Hello");
+    //Gtk::Button b2("Goodbye");
 
-    // conf
-    b1.signal_clicked().connect(sigc::ptr_fun(&clicked1));
-    b2.signal_clicked().connect(sigc::ptr_fun(&clicked2));
-    box.pack_start(b1);
-    box.pack_end(b2);
+    //// conf
+    //b1.signal_clicked().connect(sigc::ptr_fun(&clicked1));
+    //b2.signal_clicked().connect(sigc::ptr_fun(&clicked2));
+    //box.pack_start(b1);
+    //box.pack_end(b2);
 
     // add
-    box.add(b1);
-    box.add(b2);
-    win.add(box);
-    win.show_all_children();
+    //box.add(b1);
+    //box.add(b2);
+    //win.add(box);
 
+    win.show_all_children();
     app.run(win);
     return 0;
 }
