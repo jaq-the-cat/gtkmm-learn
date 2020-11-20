@@ -28,6 +28,8 @@ int main(int argc, char *argv[]) {
 
     // conf
     b1.signal_clicked().connect(sigc::ptr_fun(&clicked));
+    box.pack_start(b1);
+    box.pack_end(b2);
 
     // add
     box.add(b1);
