@@ -11,6 +11,15 @@ int main(int argc, char *argv[]) {
     win.set_resizable(false);
     win.set_default_size(WIDTH, HEIGHT);
 
+    // stuff
+    Gtk::Box box;
+    Gtk::Button b1("Hello");
+    Gtk::Button b2("Goodbye");
+    box.add(b1);
+    box.add(b2);
+    win.add(box);
+    win.show_all_children();
+
     app.run(win);
     return 0;
 }
