@@ -1,7 +1,17 @@
-#include <gtkmm-3.0/gtkmm.h>
+#include <gtkmm.h>
+#include <iostream>
+#include <string>
 
 #define WIDTH 1200
 #define HEIGHT 800
+
+using std::cout;
+using std::endl;
+using std::string;
+
+void clicked() {
+    cout << "Hello, world!" << endl;
+}
 
 int main(int argc, char *argv[]) {
     Gtk::Main app(argc, argv);
@@ -11,10 +21,15 @@ int main(int argc, char *argv[]) {
     win.set_resizable(false);
     win.set_default_size(WIDTH, HEIGHT);
 
-    // stuff
+    // init
     Gtk::Box box;
     Gtk::Button b1("Hello");
     Gtk::Button b2("Goodbye");
+
+    // conf
+    b1.signal_clicked().connect(sigc::ptr_fun(&clicked));
+
+    // add
     box.add(b1);
     box.add(b2);
     win.add(box);
