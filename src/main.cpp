@@ -17,8 +17,15 @@ void clicked2() {
 }
 
 int main(int argc, char *argv[]) {
-    Gtk::Main app(argc, argv);
-    Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("glade/proj.glade");
+    Gtk::Window *win = nullptr;
+
+    auto app = Gtk::Application::create(argc, argv, "app");
+
+    auto builder = Gtk::Builder::create_from_file("glade/proj.glade");
+
+    builder->get_widget("win", win);
+    app->run(*win);
+    delete win;
 
     // init
     //Gtk::Box box;
@@ -35,7 +42,5 @@ int main(int argc, char *argv[]) {
     //box.add(b1);
     //box.add(b2);
     //win.add(box);
-
-    //app.run(win);
     return 0;
 }
