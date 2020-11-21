@@ -4,7 +4,3 @@ src/win.cpp
 
 -COMMANDS
 pkg-config gtkmm-3.0 --cflags --libs
-
--LIBS
-glibmm-2.4
-gtkmm-3.0

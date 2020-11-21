@@ -19,9 +19,9 @@ void clicked2() {
 int main(int argc, char *argv[]) {
     Gtk::Main app(argc, argv);
 
-    //Win win("Hello, world!");
+    Win win("Hello, world!");
 
-    Gtk::Builder::create_from_file("layout");
+    //Gtk::Builder::create_from_file("layout");
 
     // init
     //Gtk::Box box;
