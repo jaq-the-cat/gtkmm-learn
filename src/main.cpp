@@ -18,10 +18,7 @@ void clicked2() {
 
 int main(int argc, char *argv[]) {
     Gtk::Main app(argc, argv);
-
-    Win win("Hello, world!");
-
-    //Gtk::Builder::create_from_file("layout");
+    Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("glade/proj.glade");
 
     // init
     //Gtk::Box box;
