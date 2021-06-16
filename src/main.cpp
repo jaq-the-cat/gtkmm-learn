@@ -17,30 +17,16 @@ void clicked2() {
 }
 
 int main(int argc, char *argv[]) {
-    Gtk::Window *win = nullptr;
-
     auto app = Gtk::Application::create(argc, argv, "app");
 
     auto builder = Gtk::Builder::create_from_file("glade/proj.glade");
+    cout << "Got builder" << endl;
 
+    Gtk::Window *win = nullptr;
     builder->get_widget("win", win);
+    cout << "Got widget" << endl;
     app->run(*win);
     delete win;
 
-    // init
-    //Gtk::Box box;
-    //Gtk::Button b1("Hello");
-    //Gtk::Button b2("Goodbye");
-
-    //// conf
-    //b1.signal_clicked().connect(sigc::ptr_fun(&clicked1));
-    //b2.signal_clicked().connect(sigc::ptr_fun(&clicked2));
-    //box.pack_start(b1);
-    //box.pack_end(b2);
-
-    // add
-    //box.add(b1);
-    //box.add(b2);
-    //win.add(box);
     return 0;
 }
