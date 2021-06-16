@@ -127,13 +127,11 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkScale" id="speed">
+                  <object class="GtkScale">
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="orientation">vertical</property>
-                    <property name="show-fill-level">True</property>
                     <property name="round-digits">1</property>
-                    <property name="draw-value">False</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -241,17 +239,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkScale" id="trans">
-                <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="round-digits">1</property>
-                <property name="value-pos">left</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">6</property>
-              </packing>
+              <placeholder/>
             </child>
             <child>
               <object class="GtkButton" id="add_frame">
