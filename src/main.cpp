@@ -3,6 +3,7 @@
 #include <string>
 
 #include "../headers/win.hpp"
+#include "gtkmm/hvscale.h"
 
 using std::cout;
 using std::endl;
@@ -24,7 +25,7 @@ int main(int argc, char *argv[]) {
 
     Gtk::Window *win = nullptr;
     builder->get_widget("win", win);
-    cout << "Got widget" << endl;
+
     app->run(*win);
     delete win;
 
